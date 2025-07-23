@@ -1,0 +1,157 @@
+/* Reset and prevent overflow */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.offer-section {
+  width: 100%;
+  background: linear-gradient(to right, #3d0d00, #cf4c1c);
+  padding: 4rem 2rem;
+  color: white;
+  font-family: "Arial Black", sans-serif;
+  overflow-x: hidden;
+}
+
+.offer-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  margin: auto;
+  width: 100%;
+}
+
+.offer-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 1rem;
+}
+
+.limited-offer {
+  display: inline-block;
+  background: transparent;
+  border: 1px solid white;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.offer-title {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin: 0.5rem 0;
+  text-shadow: 2px 2px black;
+}
+
+.offer-description {
+  font-weight: 300;
+  line-height: 1.5;
+  font-size: 1rem;
+  margin: 1rem 0 2rem;
+}
+
+.countdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 80px;
+}
+
+.time-box span {
+  font-size: 2rem;
+  display: block;
+}
+
+.time-box small {
+  font-size: 0.75rem;
+  letter-spacing: 1px;
+}
+
+.offer-image {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.offer-image img {
+  width: 100%;
+  max-width: 500px;
+  object-fit: contain;
+  display: block;
+}
+
+.offer-badge {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  border-radius: 50%;
+  padding: 1rem;
+  text-align: center;
+  transform: rotate(-10deg);
+  color: #fff;
+  font-weight: bold;
+  z-index: 1;
+}
+
+.offer-badge span {
+  display: block;
+  font-size: 0.8rem;
+}
+
+.offer-badge strong {
+  font-size: 2rem;
+  color: yellow;
+}
+
+/* Mobile & tablet view */
+@media (max-width: 768px) {
+  .offer-title {
+    font-size: 2.5rem;
+  }
+
+  .countdown {
+    justify-content: space-between;
+  }
+
+  .offer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .offer-badge {
+    top: 5%;
+    right: 10%;
+    transform: rotate(0deg);
+    padding: 0.8rem;
+  }
+
+  .offer-image img {
+    max-width: 300px;
+  }
+
+  .offer-text,
+  .offer-image {
+    padding: 0.5rem;
+  }
+}

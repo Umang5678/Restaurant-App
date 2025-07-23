@@ -1,0 +1,89 @@
+.header {
+  width: 100%; /* ensures full screen width */
+  /* prevent overflow */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 16px 32px;
+  background: linear-gradient(to right, #f8f9fa, #fce4ec);
+  border-bottom: 1px solid #ddd;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 48px; /* increased */
+  height: 48px;
+  margin-right: 12px;
+  object-fit: contain;
+}
+
+.brand {
+  font-size: 2rem; /* increased */
+  margin: 0;
+}
+
+.header-nav {
+  display: flex;
+  gap: 32px; /* more spacing */
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.1rem; /* increased */
+}
+
+.header-cart {
+  position: relative;
+  margin-top: 12px;
+}
+
+.cart-icon {
+  width: 44px;
+  height: 44px;
+  background-color: #002b36;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.4rem; /* slightly larger icon */
+}
+
+.cart-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background-color: red;
+  color: white;
+  font-size: 0.75rem;
+  padding: 3px 6px;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  .brand {
+    font-size: 1.4rem;
+  }
+
+  .header-nav {
+    gap: 16px;
+    font-size: 0.95rem;
+  }
+
+  .cart-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+  }
+}

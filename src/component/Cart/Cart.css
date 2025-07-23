@@ -1,0 +1,153 @@
+/* Cart.css */
+.cart-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.cart-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+.breadcrumb {
+  text-align: center;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.cart-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.cart-table th,
+.cart-table td {
+  border: 1px solid #eee;
+  padding: 12px;
+  text-align: center;
+}
+
+.thumbnail {
+  width: 60px;
+  height: auto;
+}
+
+.remove-btn {
+  background: transparent;
+  border: none;
+  font-size: 18px;
+  color: red;
+  cursor: pointer;
+}
+
+.cart-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 30px;
+  justify-content: flex-end;
+}
+
+.cart-actions input[type="text"] {
+  padding: 8px;
+  flex: 1 1 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.apply-btn,
+.checkout-btn {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.cart-totals {
+  border: 1px solid #eee;
+  padding: 20px;
+  max-width: 400px;
+  margin-left: auto;
+}
+
+.cart-totals h2 {
+  margin-bottom: 15px;
+}
+
+.cart-totals table {
+  width: 100%;
+}
+
+.cart-totals td {
+  padding: 8px 0;
+  vertical-align: top;
+}
+
+@media (max-width: 768px) {
+  .cart-table thead {
+    display: none;
+  }
+
+  .cart-table,
+  .cart-table tbody,
+  .cart-table tr,
+  .cart-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .cart-table tr {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+
+  .cart-table td {
+    text-align: right;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .cart-table td::before {
+    position: absolute;
+    left: 15px;
+    top: 12px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+
+  .cart-table td:nth-child(1)::before {
+    content: "Remove";
+  }
+  .cart-table td:nth-child(2)::before {
+    content: "Thumbnail";
+  }
+  .cart-table td:nth-child(3)::before {
+    content: "Product";
+  }
+  .cart-table td:nth-child(4)::before {
+    content: "Price";
+  }
+  .cart-table td:nth-child(5)::before {
+    content: "Quantity";
+  }
+  .cart-table td:nth-child(6)::before {
+    content: "Subtotal";
+  }
+
+  .cart-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cart-totals {
+    margin: 0 auto;
+    width: 100%;
+  }
+}

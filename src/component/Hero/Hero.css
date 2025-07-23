@@ -1,0 +1,142 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem;
+  color: white;
+  transition: background-color 0.5s ease;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.hero__content {
+  max-width: 50%;
+}
+
+.hero__deal {
+  background: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 25px;
+  margin-bottom: 1.5rem;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.hero__title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero__desc {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.hero__btn {
+  background: #ff0033;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero__btn:hover {
+  background: #cc002a;
+}
+
+.hero__image {
+  position: relative;
+  max-width: 45%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* Optional: to fill space around image */
+}
+
+.hero__image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain; /* ✅ No cropping */
+}
+
+.hero__badge {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: yellow;
+  transform: rotate(-20deg);
+}
+
+/* ---------------------- */
+/* ✅ RESPONSIVE STYLES ✅ */
+/* ---------------------- */
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .hero__content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .hero__image {
+    max-width: 80%;
+    height: 250px;
+  }
+
+  .hero__title {
+    font-size: 2.2rem;
+  }
+
+  .hero__desc {
+    font-size: 1rem;
+  }
+
+  .hero__deal {
+    font-size: 0.9rem;
+  }
+
+  .hero__btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .hero__badge {
+    font-size: 1.5rem;
+    top: 5%;
+    left: 10%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero__title {
+    font-size: 1.8rem;
+  }
+
+  .hero__desc {
+    font-size: 0.95rem;
+  }
+
+  .hero__image {
+    max-width: 100%;
+    height: 200px;
+  }
+
+  .hero__badge {
+    font-size: 1.2rem;
+  }
+}
